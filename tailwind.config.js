@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,11 +8,19 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['Roboto', ...defaultTheme.fontFamily.sans]
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'tomato': 'hsl(4, 100%, 67%)',
+        'dark-slate-grey': 'hsl(234, 29%, 20%)',
+        'charcoal-grey': 'hsl(235, 18%, 26%)',
+        'grey': 'hsl(231, 7%, 60%)',
+        'white': 'hsl(0, 0%, 100%)',
+      },
+      listStyleImage: {
+        checkmark: 'url("/assets/images/icon-list.svg")',
       },
     },
   },
