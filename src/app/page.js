@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import NewsletterForm from "@/components/newsletter-form";
 
 const SignUp = () => {
   return (
     <div className='flex justify-center min-h-screen items-center bg-charcoal-grey'>
-      <main className='flex justify-end bg-white flex-col-reverse md:grid md:grid-cols-2 md:flex-row md:justify-space-between md:rounded-3xl md:min-w-48 md:max-h-[40rem] md:max-w-[60rem]'>
-        <form className='flex flex-col text-dark-slate-grey text-base font-normal p-8 md:p-12'>
+      <main className='flex justify-end h-screen bg-white flex-col-reverse md:grid md:grid-cols-2 md:flex-row-reverse md:justify-space-between md:rounded-3xl md:min-w-48 md:max-h-[40rem] md:max-w-[60rem]'>
+        <div className='flex flex-col text-dark-slate-grey text-base font-normal p-8 md:p-12'>
           <h1 className='font-bold text-4xl md:text-5xl py-2 md:py-8'>Stay updated!</h1>
           <div className='py-4'>Join 60,000+ product managers receiving monthly updates on:</div>
           <ul className='py-4 pr-8 md:pr-4 space-y-1 md:space-y-2'>
@@ -21,24 +21,18 @@ const SignUp = () => {
               And much more!
             </li>
           </ul>
-          <div className='flex flex-col mt-8 space-y-8'>
-            <div className='flex flex-col space-y-2'>
-              <label htmlFor='email' className='text-xs font-bold'>Email address</label>
-              <input id='email' placeholder='email@company.com' className='px-8 py-4 border-solid border border-grey rounded-lg placeholder:text-grey'/>
-            </div>
-            <button className='p-4 rounded-lg bg-dark-slate-grey text-white font-bold'>Subscribe to monthly newsletter</button>
-          </div>
-        </form>
-        <div className='flex flex-row-reverse md:m-6'>
+          <NewsletterForm />
+        </div>
+        <div className='flex flex-row-reverse -my-6 md:m-6'>
           <img
             src='/assets/images/illustration-sign-up-desktop.svg'
-            alt='Illustration Sign Up'
-            className='w-full md:w-auto hidden md:flex'
+            alt='Sign Up Illustration'
+            className='w-auto hidden md:flex'
           />
           <img
             src='/assets/images/illustration-sign-up-mobile.svg'
-            alt='Illustration Sign Up'
-            className='w-full md:w-auto flex md:hidden'
+            alt='Sign Up Illustration'
+            className='flex md:hidden'
           />
         </div>
       </main>
