@@ -4,6 +4,8 @@ import { useRouter } from 'next/navigation';
 import { string, object } from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import Button from '@/app/components/button';
+
 const EMAIL_ERROR_MESSAGE = 'Valid email required';
 
 const validationSchema = object({
@@ -31,7 +33,7 @@ function NewsletterForm() {
             placeholder='email@company.com'
             className={`col-span-2 px-8 py-4 border-solid border ${errors.email && touched.email ? 'border-tomato bg-light-tomato' : 'border-grey'} rounded-lg focus:outline-none placeholder:text-grey`}
           />
-          <button className='col-span-2 p-4 mt-4 rounded-lg bg-dark-slate-grey text-white font-bold'>Subscribe to monthly newsletter</button>
+          <Button type='submit' className='col-span-2 p-4 mt-4'>Subscribe to monthly newsletter</Button>
         </Form>
       )}
     </Formik>
