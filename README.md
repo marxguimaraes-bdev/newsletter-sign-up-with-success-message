@@ -6,7 +6,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,7 +14,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -32,7 +31,7 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
 <img src='./public/screenshots/desktop-error.png' alt='Desktop screenshot' width=500>
 <img src='./public/screenshots/desktop-success-hover.png' alt='Desktop screenshot' width=500>
@@ -44,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-newsletter-sign-up-page-with-react-nextjs-and-tailwind-FvrhBOVdbP)
+- Live Site URL: [Vercel](https://newsletter-sign-up-with-success-message-alpha.vercel.app/)
 
 ## My process
 

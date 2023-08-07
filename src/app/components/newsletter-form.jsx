@@ -25,6 +25,7 @@ function NewsletterForm() {
           <label htmlFor='email' className='text-xs font-bold'>Email address</label>
           <ErrorMessage name='email' component='div' className='text-end text-xs font-bold text-tomato' />
           <Field
+            id='email'
             type='text'
             name='email'
             placeholder='email@company.com'
