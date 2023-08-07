@@ -12,12 +12,13 @@ const validationSchema = object({
 
 function NewsletterForm() {
   const router = useRouter();
+  const goToSuccess = ({ email }) => router.push(`/success?email=${email}`);
 
   return (
     <Formik
       initialValues={{ email: '' }}
       validationSchema={validationSchema}
-      onSubmit={({ email }) => router.push(`/success?email=${email}`)}
+      onSubmit={goToSuccess}
     >
       {({ errors, touched, isValid }) => (
         <Form className='flex grid grid-cols-2 gap-y-1 mt-8'>
