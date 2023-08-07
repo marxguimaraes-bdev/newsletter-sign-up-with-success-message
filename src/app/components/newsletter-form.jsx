@@ -1,4 +1,6 @@
-'use client';
+'use client'
+
+import { useRouter } from 'next/navigation';
 import { string, object } from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
@@ -8,14 +10,16 @@ const validationSchema = object({
   email: string().email(EMAIL_ERROR_MESSAGE).required(EMAIL_ERROR_MESSAGE),
 });
 
-const NewsletterForm = () => {
+function NewsletterForm() {
+  const router = useRouter();
+
   return (
     <Formik
       initialValues={{ email: '' }}
       validationSchema={validationSchema}
-      onSubmit={(values) => console.log(values)}
+      onSubmit={({ email }) => router.push(`/success?email=${email}`)}
     >
-      {({ errors, touched }) => (
+      {({ errors, touched, isValid }) => (
         <Form className='flex grid grid-cols-2 gap-y-1 mt-8'>
           <label htmlFor='email' className='text-xs font-bold'>Email address</label>
           <ErrorMessage name='email' component='div' className='text-end text-xs font-bold text-tomato' />
